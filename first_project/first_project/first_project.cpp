@@ -3,14 +3,51 @@
 
 #include <iostream>
 
+using namespace std;
+
+int sum_of_two(int a, int b);
+
+
 int main()
 {
-    std::cout << "Hello World123!\n";
+
+    int a = 12;
+    float e = 1.5;
+    int b = 13;
+    int c = sum_of_two(a, b);
+    cout << c;
+    string abc = "12345";
+    cout << abc;
 }
 
+int sum_of_two(int a, int b)
+{
+    cout << a + b << endl;
+    return a + b;
+}
+
+//bool	                    1	true або false
+//unsigned short int	    2	від 0 до 65 535
+//short int	                2	від - 32 768 до 32 767
+//unsigned long int	        4	від 0 до 4 294 967 295
+//long int	                4	від - 2 147 483 648 до 2 147 483 647
+//int(16 розрядів)	        2	від - 32 768 до 32 767
+//int(32 розряди)	        4	від - 2 147 483 648 до 2 147 483 647
+//unsigned int(16 розрядів)	2	від 0 до 65 535
+//unsigned int(32 розряди)	4	від 0 до 4 294 967 295
+//char	                    1	від 0 до 256
+//float	                    4	від 1.2е - 38 до 3.4е38
+//double	                8	від 2.2е - 308 до 1.8е308
+//long double	            10	від 3.4е - 4932 до 3.4е + 4932
+//string
 
 
+//bit 0,1
+//byte = 8 bit
+//kbyte = 1024 byte
 
+//1 byte 00000000 - 11111111
+// 1*2^0+1*2^1+1*2^2*1*2^3+1*2^4+1*2^5+1*2^6+1*2^7 = 1+2+4+8+16+32+64+128 = 255
 
 
 
