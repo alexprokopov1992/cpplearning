@@ -2,27 +2,57 @@
 //
 
 #include <iostream>
+#include <cstdlib> 
+
+const double PI = 3.14;
+int number = 0;
 
 using namespace std;
 
-// int difference_of_two(int, int);
-
-int difference_of_two(int first_number, int second_number)
-{
-    auto result = first_number - second_number;
-    return result;
-}
-
 int main()
 {
-    int a = 12 + 15;
-    int b = 18;
-    int c = difference_of_two(a, b);
-    cout << c;
-    int d;
-    d = 12;
-    cout << endl << d;
+	cout << number;
+	setlocale(LC_ALL, "Russian");
+	//int a;
+	//string input_stroka;
+	//cout << "Введите число: ";
+	//cin >> a;
+	//cout << "Вы ввели: " << a << endl;
+	//cout << "Введите строку: ";
+	//cin >> input_stroka;
+	//cout << "Вы ввели: " << input_stroka << endl;
+	//for (auto symb : input_stroka)
+	//{
+	//	cout << symb << endl;
+	//}
+	//cout << "_________" << endl;
+	//cout << input_stroka[5];
+	//system("pause");
+	//cout << endl;
 
+	while (true)
+	{
+		int input;
+		cout << "Угадайте число (1-10): ";
+		cin >> input;
+		if (input == 3)
+		{
+			break;
+		}
+	}
+
+	cout << "Угадали!" << endl;
+
+	int input = 0;
+	while (input != 3)
+	{
+		cout << "Угадайте число (1-10): ";
+		cin >> input;
+	}
+	cout << "Угадали!" << endl;
+	cout << input << endl;
+
+	return 0;
 }
 
 
