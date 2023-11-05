@@ -11,47 +11,50 @@ using namespace std;
 
 int main()
 {
-	cout << number;
-	setlocale(LC_ALL, "Russian");
-	//int a;
-	//string input_stroka;
-	//cout << "Введите число: ";
-	//cin >> a;
-	//cout << "Вы ввели: " << a << endl;
-	//cout << "Введите строку: ";
-	//cin >> input_stroka;
-	//cout << "Вы ввели: " << input_stroka << endl;
-	//for (auto symb : input_stroka)
-	//{
-	//	cout << symb << endl;
-	//}
-	//cout << "_________" << endl;
-	//cout << input_stroka[5];
-	//system("pause");
-	//cout << endl;
-
-	while (true)
-	{
-		int input;
-		cout << "Угадайте число (1-10): ";
-		cin >> input;
-		if (input == 3)
-		{
-			break;
-		}
-	}
-
-	cout << "Угадали!" << endl;
-
-	int input = 0;
-	while (input != 3)
-	{
-		cout << "Угадайте число (1-10): ";
-		cin >> input;
-	}
-	cout << "Угадали!" << endl;
-	cout << input << endl;
-
+	/*
+	int a = 13;
+	int b = 4;
+	cout << a + b << endl;
+	cout << a - b << endl;
+	cout << a / b << endl;
+	cout << a * b << endl;
+	cout << a % b << endl;
+	cout << endl;
+	double c = 13;
+	double d = 4;
+	cout << c + d << endl;
+	cout << c - d << endl;
+	cout << c / d << endl;
+	cout << c * d << endl;
+	cout << endl;
+	*/
+	// Инкремент Постфиксный (сначала использует число в выражении, потом увеличивает его на единицу)
+	int f = 0;
+	//f += 1;
+	cout << f++ << endl;
+	cout << f << endl << endl;
+	// Инкремент Префиксный (сначала увеличивает на единицу, потом использует)
+	f = 0;
+	cout << ++f << endl;
+	cout << f << endl << endl;
+	// Декремент Постфиксный
+	f = 0;
+	cout << f-- << endl;
+	cout << f << endl << endl;
+	// Декремент Префиксный
+	f = 0;
+	cout << --f << endl;
+	cout << f << endl << endl;
+	//cout << c % d << endl;
+	int g = 12;
+	int h = 15;
+	cout << g << endl;
+	g += h;
+	g -= h;
+	cout << g << endl;
+	g *= h;
+	g /= h;
+	g = g + h;
 	return 0;
 }
 
