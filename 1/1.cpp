@@ -4,60 +4,46 @@
 #include <iostream>
 #include <cstdlib> 
 
-const double PI = 3.14;
-int number = 0;
-
 using namespace std;
+
+int num = 0;
+
+void some_func();
+
+void some_func(int);
+
+int some_func(int);
 
 int main()
 {
-	/*
-	int a = 13;
-	int b = 4;
-	cout << a + b << endl;
-	cout << a - b << endl;
-	cout << a / b << endl;
-	cout << a * b << endl;
-	cout << a % b << endl;
-	cout << endl;
-	double c = 13;
-	double d = 4;
-	cout << c + d << endl;
-	cout << c - d << endl;
-	cout << c / d << endl;
-	cout << c * d << endl;
-	cout << endl;
-	*/
-	// Инкремент Постфиксный (сначала использует число в выражении, потом увеличивает его на единицу)
-	int f = 0;
-	//f += 1;
-	cout << f++ << endl;
-	cout << f << endl << endl;
-	// Инкремент Префиксный (сначала увеличивает на единицу, потом использует)
-	f = 0;
-	cout << ++f << endl;
-	cout << f << endl << endl;
-	// Декремент Постфиксный
-	f = 0;
-	cout << f-- << endl;
-	cout << f << endl << endl;
-	// Декремент Префиксный
-	f = 0;
-	cout << --f << endl;
-	cout << f << endl << endl;
-	//cout << c % d << endl;
-	int g = 12;
-	int h = 15;
-	cout << g << endl;
-	g += h;
-	g -= h;
-	cout << g << endl;
-	g *= h;
-	g /= h;
-	g = g + h;
+	some_func();
+	some_func();
+	some_func();
+	some_func();
+	some_func();
+	some_func();
+	some_func(12);
+	some_func(13);
 	return 0;
 }
 
+void some_func()
+{
+	cout << ++num << endl;
+}
+
+void some_func(int arg)
+{
+	num += arg;
+	cout << num << endl;
+}
+
+int some_func(int arg)
+{
+	num += arg;
+	cout << num << endl;
+	return num;
+}
 
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
