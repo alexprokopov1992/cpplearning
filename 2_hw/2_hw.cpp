@@ -2,15 +2,48 @@
 //
 
 #include <iostream>
+#include <string>
 
-int main()
+using namespace std;
+
+//Функция которая определяет четное ли число, и возвращает true если четное, false - если нечетное 
+bool isEven(int)
 {
-    std::cout << "Hello World!\n";
+
+    return false;
 }
 
 //Написать функцию, которая будет искать суму всех цифр числа
+int sumOfDigits(uint32_t number)
+{
+
+    return 0;
+}
+
+//Даны координаты точки на координатной плоскости x1, y1, x2, y2.Разработать функцию Length(), которая вычисляет длину отрезка образованного этими точками.
+//для нахождения корня из числа используется функция sqrt(число), пример в main()
+float lengthOfLine(int x1, int y1, int x2, int y2)
+{
+
+    return 0.0f;
+}
+
+//функция которая принимает строку и символ и считает сколько раз это символ встречается в строке
+//для считывания строки использовать функцию getline(cin, str), пример использования в main()
+int numOfCharInString(string str, char symb)
+{
+
+    return 0;
+}
 
 
+int main()
+{
+    string str;
+    getline(cin, str);
+    cout << str << endl;
+    std::cout << sqrt(3);
+}
 
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
