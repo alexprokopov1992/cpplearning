@@ -39,6 +39,7 @@ int numOfCharInString(string str, char symb)
 
 int main()
 {
+    //test
     string str;
     getline(cin, str);
     cout << str << endl;
