@@ -7,43 +7,66 @@
 using namespace std;
 
 //Функция которая определяет четное ли число, и возвращает true если четное, false - если нечетное 
-bool isEven(int)
+bool isEven(int number)
 {
-
-    return false;
+    return (number % 2 == 0);
 }
 
 //Написать функцию, которая будет искать суму всех цифр числа
 int sumOfDigits(uint32_t number)
 {
-
-    return 0;
+    int summ = 0;
+    while (number>0)
+    {
+        summ += number % 10;
+        number /= 10;
+    }
+    return summ;
 }
 
 //Даны координаты точки на координатной плоскости x1, y1, x2, y2.Разработать функцию Length(), которая вычисляет длину отрезка образованного этими точками.
 //для нахождения корня из числа используется функция sqrt(число), пример в main()
-float lengthOfLine(int x1, int y1, int x2, int y2)
+double lengthOfLine(int x1, int y1, int x2, int y2)
 {
-
-    return 0.0f;
+    double result = 0;
+    result = sqrt(pow((x1 - x2),2) + pow((y1 - y2), 2));
+    return result;
 }
 
 //функция которая принимает строку и символ и считает сколько раз это символ встречается в строке
 //для считывания строки использовать функцию getline(cin, str), пример использования в main()
 int numOfCharInString(string str, char symb)
 {
+    /*int schetchik = 0;
+    for (char letter : str)
+    {
+        if (letter == symb) schetchik++;
+    }
 
-    return 0;
+    return schetchik;*/
+    int counter = 0;
+    for (int i = 0; i < str.length(); i++) {
+        if (str[i] == symb) counter++;
+    }
+    return counter;
 }
 
 
 int main()
 {
     //test
-    string str;
-    getline(cin, str);
-    cout << str << endl;
-    std::cout << sqrt(3);
+    //string str;
+    //getline(cin, str);
+    //cout << str << endl;
+    //std::cout << sqrt(3);
+    //cout << isEven(15) << endl;
+    //cout << isEven(20) << endl;
+    //uint32_t number;
+    //cin >> number;
+   // cout << sumOfDigits(number);
+   // cout << pow(2, 0.5) << endl;
+   // cout << lengthOfLine(0, 0, 5, 5);
+    cout << numOfCharInString("text", 't');
 }
 
 
