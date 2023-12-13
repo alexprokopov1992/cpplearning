@@ -6,7 +6,7 @@ int main()
 {
 	double value;
 	double value2;
-	char oper;
+	uint8_t oper;
 	cin >> value;
 	cin >> value2;
 	cin >> oper;
@@ -18,6 +18,9 @@ int main()
 		cout << value << "/" << value2 << '=' << value / value2;
 	else if (oper == '*')
 		cout << value << "*" << value2 << '=' << value * value2;
+	else {
+		cout << "invalid input: " << oper;
+	}
 
 
 }
