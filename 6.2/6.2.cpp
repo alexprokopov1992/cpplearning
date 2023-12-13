@@ -6,6 +6,8 @@
 using namespace std;
 
 void sortArrayAscending(int [], size_t);
+void sortArrayDescending(int[], size_t);
+
 void sum_of_two(int& a, int& b)
 {
     cout << a + b << endl;
@@ -86,6 +88,13 @@ void sortArrayAscending(int arr[], size_t arrSize)
     }
     cout << endl;
 }
+
+void sortArrayDescending(int arr[], size_t arrSize)
+{
+
+}
+
+
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
 // Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
 
