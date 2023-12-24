@@ -48,7 +48,8 @@ int main()
     //cout << endl;
     int arr[10] = { 34, 65, 17, 9, 150, 170, 18, 23, 12, 3 };
     sortArrayAscending(arr, sizeof(arr) / sizeof(arr[0]));
-    for (auto el : arr)
+    sortArrayDescending(arr, sizeof(arr) / sizeof(arr[0]));
+    /*for (auto el : arr)
     {
         cout << el << " ";
     }
@@ -57,12 +58,11 @@ int main()
     int v1 = 3;
     int v2 = 5;
     sum_of_two(v1, v2);
-    cout << v1 << " " << v2 << endl;
+    cout << v1 << " " << v2 << endl;*/
 }
 
 void sortArrayAscending(int arr[], size_t arrSize)
 {
-
     for (int i = 0; i < arrSize - 1; i++)
     {
         int minElement = arr[i];
@@ -91,7 +91,30 @@ void sortArrayAscending(int arr[], size_t arrSize)
 
 void sortArrayDescending(int arr[], size_t arrSize)
 {
-
+    for (int i = 0; i < arrSize - 1; i++)
+    {
+        int maxElement = arr[i];
+        int maxElementIndex = i;
+        for (int k = i + 1; k < arrSize; k++)
+        {
+            if (maxElement < arr[k])
+            {
+                maxElement = arr[k];
+                maxElementIndex = k;
+            }
+        }
+        if (maxElementIndex != i)
+        {
+            int temp = arr[i];
+            arr[i] = arr[maxElementIndex];
+            arr[maxElementIndex] = temp;
+        }
+    }
+    for (int i = 0; i < arrSize; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
 }
 
 
