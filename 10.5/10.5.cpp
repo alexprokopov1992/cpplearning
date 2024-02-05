@@ -52,6 +52,7 @@ void printDeck(const std::array<Card, 52>&);
 void swapCard(Card&, Card&);
 int getRandomNumber(int, int);
 void shuffleDeck(std::array<Card, 52>&);
+int getCardValue(const Card&);
 
 int getRandomNumberTest(int min, int max)
 {
@@ -92,6 +93,8 @@ int main()
 	getRandomNumberTest(0, 51);
 	getRandomNumberTest(0, 51);
 	getRandomNumberTest(0, 51);
+
+
 	return 0;
 }
 
@@ -140,11 +143,31 @@ void printCard(const Card& card)
 	}
 }
 
+int getCardValue(const Card& card)
+{
+	switch (card.rank)
+	{
+		case RANK_2:		return 2;
+		case RANK_3:		return 3;
+		case RANK_4:		return 4;
+		case RANK_5:		return 5;
+		case RANK_6:		return 6;
+		case RANK_7:		return 7;
+		case RANK_8:		return 8;
+		case RANK_9:		return 9;
+		case RANK_10:		return 10;
+		case RANK_VALET:	return 10;
+		case RANK_DAMA:	    return 10;
+		case RANK_KOROL:	return 10;
+		case RANK_TYZ:		return 11;
+	}
+
+	return 0;
+}
+
 int getRandomNumber(int min, int max)
 {
-	static const double fraction = 1.0 / (static_cast<double>(RAND_MAX) + 1.0);
-	// Равномерно распределяем генерацию случайного числа в диапазоне значений
-	return static_cast<int>(rand() * fraction * (max - min + 1) + min);
+	return static_cast<int>(rand()) % (max - min + 1) + min;
 }
 
 void shuffleDeck(std::array<Card, 52>& deck)
