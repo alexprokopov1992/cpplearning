@@ -26,6 +26,11 @@ public:
 	double getA() { return m_a; }
 	double getB() { return m_b; }
 	double getC() { return m_c; }
+
+	Something operator+ () const {
+		return *this;
+		// return Something(m_a, m_b, m_c);
+	}
 };
 
 
