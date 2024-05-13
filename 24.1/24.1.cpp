@@ -1,20 +1,77 @@
-﻿// 24.1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
+﻿#include <string>
 #include <iostream>
+
+class Human
+{
+public:
+    std::string m_name;
+    int m_age;
+
+    Human(std::string name = "", int age = 0)
+        : m_name(name), m_age(age)
+    {
+    }
+
+    std::string getName() const { return m_name; }
+    int getAge() const { return m_age; }
+
+};
+
+class BasketballPlayer : public Human
+{
+public:
+    double m_gameAverage;
+    int m_points;
+
+    BasketballPlayer(double gameAverage = 0.0, int points = 0)
+        : m_gameAverage(gameAverage), m_points(points)
+    {
+    }
+};
+
+class Employee : public Human
+{
+public:
+    int m_wage;
+    long m_employeeID;
+
+    Employee(int wage = 0, long employeeID = 0)
+        : m_wage(wage), m_employeeID(employeeID)
+    {
+    }
+
+    void printNameAndWage() const
+    {
+        std::cout << m_name << ": " << m_wage << '\n';
+    }
+};
+
+
+class Supervisor : public Employee
+{
+public:
+    // Этот Супервайзер может наблюдать максимум за 5-тью Работниками
+    long m_nOverseesIDs[5];
+
+    Supervisor()
+    {
+    }
+
+};
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    // Создаем нового Баскетболиста
+    BasketballPlayer anton;
+    // Присваиваем ему имя (мы можем делать это напрямую, так как m_name является public)
+    anton.m_name = "Anton";
+    // Выводим имя Баскетболиста
+    std::cout << anton.getName() << '\n'; // используем метод getName(), который мы унаследовали от класса Human
+
+    Employee ivan(350, 787);
+    ivan.m_name = "Ivan"; // мы можем это сделать, так как m_name является public
+
+    ivan.printNameAndWage();
+
+    return 0;
 }
-
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
-
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
